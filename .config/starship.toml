@@ -1,0 +1,30 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+format = "$os$time$all$character"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+truncation_symbol = "../"
+
+[character]
+success_symbol = "[ ](bold green)"
+error_symbol = "[✘ ](bold red)"
+
+[os]
+disabled = false
+style = "bold blue"
+format = "[$symbol ]($style)"
+
+[os.symbols]
+Arch = " "
+NixOS = " "
+
+[time]
+disabled = false
+time_format = "%T"
+format = "at [$time ]($style)"
+
+[direnv]
+disabled = false
