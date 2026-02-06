@@ -286,7 +286,12 @@ layout {
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 spawn-at-startup "qs" "-c" "noctalia-shell"
-spawn-at-startup "swayidle -w timeout 300 qs -c noctalia-shell ipc call lockScreen lock timeout 600 systemctl suspend || loginctl suspend before-sleep noctalia-shell ipc call lockScreen lock timeout 601 niri msg action power-off-monitors"
+spawn-at-startup "swayidle" "-w" \
+  "timeout" "300" "qs -c noctalia-shell ipc call lockScreen lock" \
+  "timeout" "600" "systemctl suspend || loginctl suspend " \
+  "before-sleep" "qs -c noctalia-shell ipc call lockScreen lock" \
+  "timeout" "601" "niri msg action power-off-monitors"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 hotkey-overlay {
   // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.

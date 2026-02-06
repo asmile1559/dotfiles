@@ -30,6 +30,7 @@
           gruntfuggly.todo-tree
           fill-labs.dependi
           vscodevim.vim
+          llvm-vs-code-extensions.vscode-clangd
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
@@ -63,15 +64,19 @@
           };
         };
         editor.fontFamily = "'Maple Mono NL NF CN', 'Fira Code'";
-        files.autoSave = "afterDelay";
+        editor.rulers = [ 120 ];
         editor.formatOnSave = true;
+
+        files.autoSave = "afterDelay";
         window.restoreWindows = "none";
+        terminal.integrated.stickyScroll.enabled = false;
       };
     };
   };
 
   xdg.dataFile = {
     "applications/code.desktop".source = "${pkgs.vscode}/share/applications/code.desktop";
-    "applications/code-url-handler.desktop".source = "${pkgs.vscode}/share/applications/code-url-handler.desktop";
+    "applications/code-url-handler.desktop".source =
+      "${pkgs.vscode}/share/applications/code-url-handler.desktop";
   };
 }

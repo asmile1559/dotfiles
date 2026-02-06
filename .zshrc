@@ -7,10 +7,6 @@ export EDITOR=nvim
 
 # aliases
 
-# hooks
-eval "$(starship init zsh)"
-eval "$(direnv hook zsh)"
-source <(fzf --zsh)
 
 # plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -28,4 +24,12 @@ antigen bundle direnv
 antigen bundle Aloxaf/fzf-tab
 
 antigen apply
+
+# Created by `pipx`
+export PATH="$PATH:/home/box/.local/bin"
+
+# hooks
+eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
+source <(fzf --zsh)
 
