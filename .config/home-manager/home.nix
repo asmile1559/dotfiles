@@ -47,9 +47,13 @@
     pkgs.devenv
     pkgs.go
     pkgs.gotools
+    pkgs.delve
     pkgs.rustup
     pkgs.clang
     pkgs.clang-tools
+    pkgs.lldb
+    pkgs.vscode-extensions.vadimcn.vscode-lldb
+    pkgs.python3Packages.debugpy
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -87,6 +91,11 @@
     # EDITOR = "emacs";
   };
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 15d";
+  };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
