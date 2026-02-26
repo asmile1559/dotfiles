@@ -16,6 +16,7 @@
           ms-python.python
           ms-python.debugpy
           github.github-vscode-theme
+          catppuccin.catppuccin-vsc
           catppuccin.catppuccin-vsc-icons
           ms-vscode-remote.vscode-remote-extensionpack
           ms-vscode-remote.remote-containers
@@ -31,6 +32,12 @@
           fill-labs.dependi
           vscodevim.vim
           llvm-vs-code-extensions.vscode-clangd
+          ms-vscode.cmake-tools
+          ms-vscode.makefile-tools
+          ms-azuretools.vscode-containers
+          yzhang.markdown-all-in-one
+          ms-vscode.hexeditor
+          tauri-apps.tauri-vscode
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
@@ -51,8 +58,14 @@
         "[kdl]".editor.tabSize = 2;
         "[json]".editor.tabSize = 2;
         "[html]".editor.tabSize = 2;
-        workbench.colorTheme = "GitHub Dark";
-        workbench.iconTheme = "catppuccin-mocha";
+
+        "[c]".editor.tabSize = 4;
+        "[cpp]".editor.tabSize = 4;
+        "[python]".editor.tabSize = 4;
+        "[go]".editor.tabSize = 4;
+        "[rust]".editor.tabSize = 4;
+        "[toml]".editor.tabSize = 2;
+        "[markdown]".editor.tabSize = 2;
 
         nix.enableLanguageServer = true;
         nix.serverPath = [ "nixd" ];
@@ -64,12 +77,20 @@
           };
         };
         editor.fontFamily = "'Maple Mono NL NF CN', 'Fira Code'";
-        editor.rulers = [ 120 ];
+        editor.rulers = [ 80 ];
         editor.formatOnSave = true;
 
         files.autoSave = "afterDelay";
         window.restoreWindows = "none";
         terminal.integrated.stickyScroll.enabled = false;
+        editor.renderWhitespace = "boundary";
+        # workbench.colorTheme = "GitHub Dark";
+        workbench = {
+          colorTheme = "Catppuccin Mocha";
+          iconTheme = "catppuccin-mocha";
+        };
+        catppuccin.syncWithIconPack = false;
+        lldb.launch.expressions = "native";
       };
     };
   };

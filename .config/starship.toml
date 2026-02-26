@@ -7,10 +7,21 @@ format = "$os$time$all$character"
 truncation_length = 3
 truncate_to_repo = true
 truncation_symbol = "../"
+read_only = "🔒 "
+format = '[$path ]($style)[$read_only]($read_only_style)'
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
 
 [character]
-success_symbol = "[ ](bold green)"
-error_symbol = "[✘ ](bold red)"
+success_symbol = "[🤣👉](bold green)"
+error_symbol = "[😭👋](bold red)"
+# success_symbol = "[ ](bold green)"
+# error_symbol = "[✘ ](bold red)"
 
 [os]
 disabled = false
@@ -28,3 +39,48 @@ format = "at [$time ]($style)"
 
 [direnv]
 disabled = false
+symbol = "direnv"
+style = "bold green"
+format = "[$symbol\\($loaded/$allowed\\)]($style) "
+
+# language
+[c]
+symbol = ""
+style = "bold blue"
+format = '[$symbol( $version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bold orange"
+format = '[$symbol( $version) ]($style)'
+
+[golang]
+symbol = ""
+style = "bold blue"
+format = '[$symbol( $version) ]($style)'
+
+[python]
+symbol = ""
+style = "bold green"
+format = '[$symbol( $version) ]($style)'
+
+[java]
+symbol = ""
+style = "bold brown"
+format = '[$symbol( $version) ]($style)'
+
+[cmake]
+symbol = ""
+style = "bold blue"
+format = '[$symbol( $version) ]($style)'
+
+[pixi]
+symbol = "🧚 "
+style = "yellow bold"
+show_default_environment = false
+format = "via [$symbol($version )(\\($environment\\) )]($style)"
+
+[nodejs]
+symbol = "󰎙"
+style = "bold green"
+format = '[$symbol( $version)]($style)'

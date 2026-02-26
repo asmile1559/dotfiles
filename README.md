@@ -29,6 +29,7 @@
     - vscode
     - nixd
     - nixfmt
+- nixvim
 
 ## fonts
 
@@ -58,3 +59,4 @@ bibata-cursors: Bibata-Modern-Ice
 
 - zotero
 - heroic
+- polkit-gnome

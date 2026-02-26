@@ -23,3 +23,15 @@ To install NixVim in machine, run the following command
 ```bash
 nix profile add .
 ```
+
+```bash
+nix profile remove .config/home-manager/packages/nixvim
+nix profile add .
+```
+
+## TODO
+
+1. Rust can't debug now
+2. add remote-nvim to `lsp`
+3. add markdown preview
+4. make 'ai' folder and add ai support

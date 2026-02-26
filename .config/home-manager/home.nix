@@ -45,6 +45,11 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     pkgs.devenv
+    pkgs.go
+    pkgs.gotools
+    pkgs.rustup
+    pkgs.clang
+    pkgs.clang-tools
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

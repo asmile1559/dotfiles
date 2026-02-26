@@ -3,38 +3,19 @@
     enable = true;
     settings = {
       # for details, see :h bufferline-configuration
-      highlights = {
-        buffer_selected = {
-          bg = "#363a4f";
-        };
-        fill = {
-          bg = "#1e2030";
-        };
-        numbers_selected = {
-          bg = "#363a4f";
-        };
-        separator = {
-          fg = "#1e2030";
-        };
-        separator_selected = {
-          bg = "#363a4f";
-          fg = "#1e2030";
-        };
-        separator_visible = {
-          fg = "#1e2030";
-        };
-        tab_selected = {
-          bg = "#363a4f";
-        };
-      };
       options = {
         mode = "buffers";
+        style_preset = "default"; # or "powerline"
         themable = true;
         numbers = "ordinal";
-        close_command = "bdelete! %d";
+        close_command.__raw = ''
+          function(bufnr)
+            MiniBufremove.delete(bufnr, false) -- or true for force
+          end
+        '';
         indicator = {
           icon = "▎";
-          style = "icon";
+          style = "underline";
         };
         buffer_close_icon = "󰅖";
         close_icon = "";
@@ -92,7 +73,7 @@
             highlight = "Directory";
             text = "File Explorer";
             text_align = "center";
-            separator = true;
+            # separator = true;
           }
         ];
         color_icon = true;
@@ -114,7 +95,8 @@
         duplicates_across_groups = true;
         persist_buffer_sort = true;
         move_wraps_at_ends = false;
-        separator_style = "thick";
+        # "slant" | "padded_slant" | "slope " | padded_slope | "thick" | "thin" | { 'any', 'any' }
+        separator_style = "slope";
         enforce_regular_tabs = false;
         always_show_bufferline = true;
         auto_toggle_bufferline = true;
@@ -123,47 +105,8 @@
           delay = 200;
           reveal = "close";
         };
-        sort_by = "id";
-
-        groups = {
-          items = [
-            {
-              highlight = {
-                fg = "#a6da95";
-                sp = "#494d64";
-                underline = true;
-              };
-              matcher = {
-                __raw = ''
-                  function(buf)
-                    return buf.name:match('%test') or buf.name:match('%.spec')
-                  end
-                '';
-              };
-              name = "Tests";
-              priority = 2;
-            }
-            {
-              auto_close = false;
-              highlight = {
-                fg = "#ffffff";
-                sp = "#494d64";
-                undercurl = true;
-              };
-              matcher = {
-                __raw = ''
-                  function(buf)
-                    return buf.name:match('%.md') or buf.name:match('%.txt')
-                  end
-                '';
-              };
-              name = "Docs";
-            }
-          ];
-          options = {
-            toggle_hidden_on_enter = true;
-          };
-        };
+        # sort_by = "id";
+        sort_by = "insert_after_current";
       };
     };
   };
@@ -187,8 +130,13 @@
     }
     {
       mode = "n";
-      key = "<leader><C-w>";
-      action = "<cmd>bdelete<cr>";
+      key = "<leader>bd";
+      action.__raw = ''
+        function()
+          local buf = vim.api.nvim_get_current_buf()
+          MiniBufremove.delete(buf, false) -- or true for force
+        end
+      '';
       options = {
         desc = "Close this buffer";
       };

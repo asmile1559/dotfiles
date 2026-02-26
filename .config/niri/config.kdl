@@ -107,15 +107,24 @@ output "DP-1" {
   focus-at-startup
 }
 
-output "HDMI-A-1" {
+/-output "HDMI-A-1" {
   mode "1920x1080@100.0"
-
+ 
   scale 1.0
-
+ 
   transform "normal"
   position x=0 y=0
 }
 
+output "HDMI-A-1" {
+  mode "3440x1440@60.0"
+
+  scale 1.25
+
+  transform "normal"
+
+  position x=0 y=0
+}
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
@@ -336,15 +345,15 @@ window-rule {
   clip-to-geometry true
 }
 
-window-rule {
-  // This regular expression is intentionally made as specific as possible,
-  // since this is the default config, and we want no false positives.
-  // You can get away with just app-id="wezterm" if you want.
-  match app-id=r#"zen"#
-  match app-id=r#"code"#
-  default-column-width { proportion 1.0; }
-  open-floating false
-}
+// window-rule {
+//   // This regular expression is intentionally made as specific as possible,
+//   // since this is the default config, and we want no false positives.
+//   // You can get away with just app-id="wezterm" if you want.
+//   match app-id=r#"zen"#
+//   match app-id=r#"code"#
+//   default-column-width { proportion 1.0; }
+//   open-floating false
+// }
 
 window-rule {
   // This app-id regular expression will work for both:
