@@ -37,7 +37,7 @@
 
 ## cursor
 
-bibata-cursors: Bibata-Modern-Ice 
+bibata-cursors: Bibata-Modern-Ice
 
 ## windows manager
 

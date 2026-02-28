@@ -10,7 +10,7 @@
       };
       storage = {
         cache = "~/Coding/leetcode/cache";
-        home = "~/Coding/leetcode";
+        home = "~/Coding/leetcode/questions";
       };
       plugins = {
         no-standalone = false;

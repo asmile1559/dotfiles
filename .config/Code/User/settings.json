@@ -1,0 +1,78 @@
+{
+    "editor.fontFamily": "'Maple Mono NL NF CN', 'Fira Code'",
+    "editor.rulers": [
+        80
+    ],
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "boundary",
+    "[c]": {
+        "editor.tabSize": 4
+    },
+    "[cpp]": {
+        "editor.tabSize": 4
+    },
+    "[python]": {
+        "editor.tabSize": 4,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultColorDecorators": "never"
+    },
+    "[lua]": {
+        "editor.tabSize": 2,
+        "editor.quickSuggestions": {
+            "comments": "inline",
+            "other": "on",
+            "strings": "on"
+        },
+        "editor.semanticHighlighting.enabled": true
+    },
+    "[go]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false
+    },
+    "[rust]": {
+        "editor.tabSize": 4
+    },
+    "[toml]": {
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.tabSize": 2,
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.suggest.insertMode": "replace"
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.maxTokenizationLineLength": 2500
+    },
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.maxTokenizationLineLength": 2500
+    },
+    "[markdown]": {
+        "editor.tabSize": 2,
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
+    },
+    "[kdl]": {
+        "editor.tabSize": 2
+    },
+    "files.autoSave": "afterDelay",
+    "window.restoreWindows": "none",
+    "terminal.integrated.stickyScroll.enabled": false,
+    "redhat.telemetry.enabled": true,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+}

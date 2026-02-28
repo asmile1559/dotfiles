@@ -62,7 +62,10 @@
         "[c]".editor.tabSize = 4;
         "[cpp]".editor.tabSize = 4;
         "[python]".editor.tabSize = 4;
-        "[go]".editor.tabSize = 4;
+        "[go]".editor = {
+          tabSize = 4;
+          insertSpaces = false;
+        };
         "[rust]".editor.tabSize = 4;
         "[toml]".editor.tabSize = 2;
         "[markdown]".editor.tabSize = 2;

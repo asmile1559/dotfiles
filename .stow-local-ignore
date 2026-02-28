@@ -5,3 +5,5 @@
 README.md
 templates
 nix-packages
+.config/home-manager
+.config/nix
