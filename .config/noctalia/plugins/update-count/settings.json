@@ -1,8 +1,8 @@
 {
-  "updateIntervalMinutes": 10,
+  "updateIntervalMinutes": 5,
   "updateTerminalCommand": "ghostty -e",
   "currentIconName": "world-download",
   "hideOnZero": false,
   "customCmdGetNumUpdates": "paru -Quq 2>/dev/null | wc -l",
-  "customCmdDoSystemUpdate": "sudo pacman -Syu"
+  "customCmdDoSystemUpdate": "paru -Syu"
 }

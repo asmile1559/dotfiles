@@ -75,4 +75,5 @@
     "redhat.telemetry.enabled": true,
     "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.editor.empty.hint": "hidden",
 }
