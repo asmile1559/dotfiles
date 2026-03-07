@@ -299,9 +299,9 @@ layout {
 spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "swayidle" "-w" \
   "timeout" "300" "qs -c noctalia-shell ipc call lockScreen lock" \
-  "timeout" "600" "systemctl suspend || loginctl suspend " \
-  "before-sleep" "qs -c noctalia-shell ipc call lockScreen lock" \
   "timeout" "601" "niri msg action power-off-monitors"
+  // "timeout" "600" "systemctl suspend || loginctl suspend " \
+  // "before-sleep" "qs -c noctalia-shell ipc call lockScreen lock" \
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 hotkey-overlay {
@@ -385,7 +385,7 @@ window-rule {
 }
 
 layer-rule {
-  match namespace=r#"noctalia-overview*"#
+  match namespace="^noctalia-overview*"
   place-within-backdrop true
 }
 

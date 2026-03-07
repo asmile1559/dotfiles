@@ -8,4 +8,4 @@ nix-packages
 .config/home-manager
 .config/nix
 
-archive
+deprecated

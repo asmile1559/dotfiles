@@ -1,0 +1,39 @@
+#
+# This is not sourced during shell startup and is only used to configure zimfw.
+#
+
+#
+# Modules
+#
+
+# Behavior
+zmodule completion # Smart and extensive tab completion.
+zmodule environment # Set environment variables.
+zmodule input # Zsh line editor (ZLE) configuration.
+zmodule run-help # Run help for commands.
+
+# Productivity
+zmodule git # Git aliases and functions.
+zmodule fzf # Fuzzy finder for command history, file searching, and more.
+zmodule direnv # Load and unload environment variables based on the current directory.
+
+# Fish-like Plugins
+# syntax highlighting for Zsh
+zmodule zdharma-continuum/fast-syntax-highlighting
+# zsh-users/zsh-syntax-highlighting.
+# history search for Zsh
+zmodule zsh-users/zsh-history-substring-search
+# autosuggestions for Zsh.
+# performance: ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+zmodule zsh-users/zsh-autosuggestions
+
+# Completion
+#
+zmodule zsh-users/zsh-completions --fpath src # Add the src directory to the fpath for zsh-completions.
+zmodule Aloxaf/fzf-tab
+
+# Other
+zmodule Tarrasch/zsh-autoenv # Autoenv for Zsh.
+zmodule ohmyzsh/ohmyzsh --root plugins/starship
+zmodule ohmyzsh/ohmyzsh --root plugins/gitignore
+zmodule ohmyzsh/ohmyzsh --root plugins/nvm
