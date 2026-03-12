@@ -1,6 +1,7 @@
 # git files
 \.git
 \.gitignore
+\.gitmodules
 
 README.md
 templates
