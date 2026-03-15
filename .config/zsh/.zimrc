@@ -32,6 +32,9 @@ zmodule zsh-users/zsh-autosuggestions
 zmodule zsh-users/zsh-completions --fpath src # Add the src directory to the fpath for zsh-completions.
 zmodule Aloxaf/fzf-tab
 
+# Path Jump
+zmodule ajeetdsouza/zoxide
+
 # Other
 zmodule Tarrasch/zsh-autoenv # Autoenv for Zsh.
 zmodule ohmyzsh/ohmyzsh --root plugins/starship

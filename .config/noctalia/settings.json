@@ -22,7 +22,7 @@
         "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": true,
-        "terminalCommand": "alacritty -e",
+        "terminalCommand": "ghostty -e",
         "useApp2Unit": false,
         "viewMode": "list"
     },
@@ -47,6 +47,7 @@
         "contentPadding": 2,
         "density": "default",
         "displayMode": "always_visible",
+        "enableExclusionZoneInset": true,
         "floating": false,
         "fontScale": 1,
         "frameRadius": 12,
@@ -62,7 +63,7 @@
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
         "outerCorners": true,
-        "position": "top",
+        "position": "left",
         "reverseScroll": false,
         "rightClickAction": "controlCenter",
         "rightClickCommand": "",
@@ -76,6 +77,22 @@
         "widgetSpacing": 6,
         "widgets": {
             "center": [
+                {
+                    "defaultSettings": {
+                        "compactMode": false,
+                        "defaultDuration": 0,
+                        "iconColor": "none",
+                        "textColor": "none"
+                    },
+                    "id": "plugin:timer"
+                },
+                {
+                    "defaultSettings": {
+                        "hideBackground": false,
+                        "minimumThreshold": 10
+                    },
+                    "id": "plugin:catwalk"
+                },
                 {
                     "characterCount": 2,
                     "colorizeIcons": false,
@@ -92,16 +109,20 @@
                     "occupiedColor": "secondary",
                     "pillSize": 0.6,
                     "showApplications": false,
+                    "showApplicationsHover": false,
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
                 },
                 {
-                    "defaultSettings": {
-                        "hideBackground": false,
-                        "minimumThreshold": 10
-                    },
-                    "id": "plugin:catwalk"
+                    "colorizeIcons": false,
+                    "hideMode": "hidden",
+                    "id": "ActiveWindow",
+                    "maxWidth": 145,
+                    "scrollingMode": "hover",
+                    "showIcon": true,
+                    "textColor": "none",
+                    "useFixedWidth": false
                 }
             ],
             "left": [
@@ -113,15 +134,6 @@
                     "iconColor": "none",
                     "id": "Launcher",
                     "useDistroLogo": false
-                },
-                {
-                    "clockColor": "none",
-                    "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
-                    "formatVertical": "HH mm - dd MM",
-                    "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false
                 },
                 {
                     "compactMode": true,
@@ -146,41 +158,12 @@
                     "usePadding": false
                 },
                 {
-                    "colorizeIcons": false,
-                    "hideMode": "hidden",
-                    "id": "ActiveWindow",
-                    "maxWidth": 145,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "textColor": "none",
-                    "useFixedWidth": false
-                },
-                {
-                    "compactMode": false,
-                    "hideMode": "hidden",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 145,
-                    "panelShowAlbumArt": true,
-                    "scrollingMode": "hover",
-                    "showAlbumArt": true,
-                    "showArtistFirst": true,
-                    "showProgressRing": true,
-                    "showVisualizer": false,
-                    "textColor": "none",
-                    "useFixedWidth": false,
-                    "visualizerType": "linear"
-                }
-            ],
-            "right": [
-                {
-                    "defaultSettings": {
-                        "currentIconName": "world-download",
-                        "hideOnZero": false,
-                        "updateIntervalMinutes": 30,
-                        "updateTerminalCommand": "foot -e"
-                    },
-                    "id": "plugin:update-count"
+                    "hideWhenZero": false,
+                    "hideWhenZeroUnread": true,
+                    "iconColor": "none",
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true,
+                    "unreadBadgeColor": "primary"
                 },
                 {
                     "defaultSettings": {
@@ -202,23 +185,26 @@
                     "id": "plugin:screen-recorder"
                 },
                 {
+                    "defaultSettings": {
+                        "currentIconName": "world-download",
+                        "hideOnZero": false,
+                        "updateIntervalMinutes": 30,
+                        "updateTerminalCommand": "foot -e"
+                    },
+                    "id": "plugin:update-count"
+                }
+            ],
+            "right": [
+                {
                     "blacklist": [
                     ],
                     "chevronColor": "none",
                     "colorizeIcons": false,
-                    "drawerEnabled": true,
+                    "drawerEnabled": false,
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
                     ]
-                },
-                {
-                    "hideWhenZero": false,
-                    "hideWhenZeroUnread": false,
-                    "iconColor": "none",
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true,
-                    "unreadBadgeColor": "primary"
                 },
                 {
                     "displayMode": "onhover",
@@ -226,6 +212,15 @@
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
                     "textColor": "none"
+                },
+                {
+                    "clockColor": "none",
+                    "customFont": "",
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm ss - dd MM",
+                    "id": "Clock",
+                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "useCustomFont": false
                 },
                 {
                     "colorizeDistroLogo": false,
@@ -333,10 +328,15 @@
         }
     },
     "desktopWidgets": {
-        "enabled": false,
+        "enabled": true,
         "gridSnap": false,
         "gridSnapScale": false,
         "monitorWidgets": [
+            {
+                "name": "HDMI-A-1",
+                "widgets": [
+                ]
+            }
         ],
         "overviewEnabled": true
     },
@@ -349,8 +349,8 @@
         "dockType": "floating",
         "enabled": true,
         "floatingRatio": 1,
-        "groupApps": false,
-        "groupClickAction": "cycle",
+        "groupApps": true,
+        "groupClickAction": "list",
         "groupContextMenuMode": "extended",
         "groupIndicatorStyle": "dots",
         "inactiveIndicators": false,
@@ -366,7 +366,7 @@
         ],
         "pinnedStatic": false,
         "position": "bottom",
-        "showDockIndicator": false,
+        "showDockIndicator": true,
         "showLauncherIcon": false,
         "sitOnFrame": false,
         "size": 1
@@ -415,7 +415,7 @@
         },
         "language": "zh-CN",
         "lockOnSuspend": true,
-        "lockScreenAnimations": false,
+        "lockScreenAnimations": true,
         "lockScreenBlur": 0,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
@@ -437,7 +437,7 @@
     },
     "hooks": {
         "darkModeChange": "",
-        "enabled": true,
+        "enabled": false,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
         "screenLock": "",
@@ -552,8 +552,8 @@
     "sessionMenu": {
         "countdownDuration": 10000,
         "enableCountdown": true,
-        "largeButtonsLayout": "grid",
-        "largeButtonsStyle": false,
+        "largeButtonsLayout": "single-row",
+        "largeButtonsStyle": true,
         "position": "center",
         "powerOptions": [
             {

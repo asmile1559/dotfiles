@@ -1,62 +1,60 @@
 # My Dotfiles
 
-## requirements
+A simple dotfiles repo for manage my archlinux.
 
-- git: version control
-- stow: dotfile manager
-- zsh: shell
-- ghostty: emulator
-- fcitx5: ime
-- nix: a package manager
+## Usage 
 
-## programs
+```bash
+git clone https://github.com/asmile1559/dotfiles.git && cd dotfiles
+stow .
+```
 
-- starship: make terminal more beautiful
-- fzf: a search tools
-- direnv: environment manager for folder
-- tmux: a terminal multiplexer
-- yazi: a tui file manager
-- flatpak: a sandbox for some appliactions
-  - extension manager
-  - wechat
-  - qq
-  - qqmusic
-  - wechat
-  - wps365
-  - flatseal
-- home-manager: home files manager, for some appliactions
-  - coding
-    - vscode
-    - nixd
-    - nixfmt
-- nixvim
+## Software
 
-## fonts
+| Type                 | Name                               |
+| -------------------- | ---------------------------------- |
+| version control      | git                                |
+| config manager       | stow                               |
+| shell                | zsh                                |
+| shell plugin manager | zimfw                              |
+| shell prompt         | starship                           |
+| emulator             | ghostty                            |
+| environment manager  | direnv                             |
+| ime                  | fcitx5                             |
+| window manager       | niri/gnome                         |
+| display shell        | noctalia                           |
+| editor               | neovim/vscode                      |
+| file search          | fzf                                |
+| file manager         | tmux/gnome-file                    |
+| sandbox              | flatpak                            |
+| virtualization       | docker/kvm                         |
+| terminal multiplexer | tmux                               |
+| font                 | maple mono/noto/fira code          |
+| cursor               | bibata-cursors (Bibata-Modern-Ice) |
+| browser              | chrome                             |
+| backup               | timeshift                          |
+| game                 | steam                              |
+| polkit               | polkit-gnome                       |
 
-- maple mono: chinese mono font
+## System units
 
-## cursor
+| Type           | Name                                            |
+| -------------- | ----------------------------------------------- |
+| power-manager  | tuned-ppd                                       |
+| xwayland       | xwayland-satellite                              |
+| portal         | xdg-desktop-portal-gnome/xdg-desktop-portal-gtk |
+| player control | playerctl                                       |
+| idle control   | swayidle                                        |
+| clipboard      | wl-clipboard                                    |
+| screenshot     | satty+grim+slurp                                |
 
-bibata-cursors: Bibata-Modern-Ice
+### flatpak applications
 
-## windows manager
-
-- niri: a scrolling wm
-  - xwayland-satellite
-  - xdg-desktop-portal-gnome
-  - xdg-desktop-portal-gtk
-  - xdg-desktop-portal-hyprland
-- noctalia: a quickshell shell for niri/hyprland display
-  - playerctl
-  - sawyidle
-  - qt6ct
-  - satty
-  - grim
-  - slurp
-  - wl-clipboard
-  
-## misc
-
-- zotero
-- heroic
-- polkit-gnome
+- flatseal
+- extension manager(for gnome)
+- wechat
+- qq
+- qqmusic
+- wemeet
+- feishu
+- wps365
