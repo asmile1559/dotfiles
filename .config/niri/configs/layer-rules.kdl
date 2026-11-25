@@ -1,0 +1,33 @@
+// Dux Modular Shell (DMS) 的 layer-shell surface 命名空间：
+//   bar: dms:bar    popouts: dms:dash / dms:control-center / dms:notification-center-popout
+//   modals: dms:spotlight / dms:settings / dms:clipboard / dms:power-menu 等
+//   wallpaper: quickshell（模糊副本为 dms:blurwallpaper）
+// 参考: https://duxlabs.dev/docs/dms/layers
+
+// 壁纸层放进 niri overview 的 backdrop，让 overview 也显示当前壁纸。
+layer-rule {
+  match namespace="^quickshell$"
+  place-within-backdrop true
+}
+
+// 开启 DMS 的 “Blur Layer” 后，模糊壁纸同样放进 backdrop。
+layer-rule {
+  match namespace="^dms:blurwallpaper$"
+  place-within-backdrop true
+}
+
+// Blur（niri >= 26.04）：让 DMS 的 bar/popout/modal/notification/OSD 使用
+// ext-background-effect 模糊，并关闭 xray，避免圆角边缘透出壁纸色。
+// 想彻底关闭 DMS 的模糊时，把 blurEnabled 设为 false（~/.config/dms/settings.json）。
+layer-rule {
+  match namespace="^dms:(bar|dock|notification-popup|notification-center-popout|control-center|dash|spotlight|settings|clipboard|osd|power-menu|process-list-modal|process-list-popout|tooltip|toast|modal|popout)$"
+  background-effect {
+    xray false
+  }
+}
+
+// 剪贴板内容不要出现在录屏/截屏里。
+layer-rule {
+  match namespace="^dms:clipboard$"
+  block-out-from "screencast"
+}

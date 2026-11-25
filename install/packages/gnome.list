@@ -1,0 +1,12 @@
+# GNOME desktop (secondary session), extensions and power profiles
+gdm
+gnome-shell
+gnome-tweaks
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
+extension-manager
+power-profiles-daemon
+gnome-shell-extension-appindicator
+gnome-shell-extension-dash-to-dock
+gnome-shell-extension-clipboard-indicator
+gnome-shell-extension-blur-my-shell

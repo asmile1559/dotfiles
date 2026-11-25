@@ -1,0 +1,20 @@
+# Dux Modular Shell (official extra; quickshell is pulled in as a dependency)
+dux-shell
+
+# 蓝牙：DMS 蓝牙面板依赖 bluez 协议栈，bluetoothctl 来自 bluez-utils
+bluez
+bluez-utils
+
+# JSON validation in install.sh and handy for DMS settings
+jq
+
+# Wallpaper-derived Material colors and the bar audio visualizer
+matugen
+cava
+
+# Clipboard history pasting via wtype
+wtype
+
+# Qt application theming and GTK3 adwaita colors used by DMS templates
+qt6ct
+adw-gtk-theme

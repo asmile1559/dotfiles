@@ -1,0 +1,77 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+format = "$os$time$all$character"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+read_only = " "
+format = '[$read_only]($read_only_style)[$path ]($style)'
+repo_root_style = "underline bold cyan"
+
+[character]
+success_symbol = "[ ](bold green)"
+error_symbol = "[✘ ](bold red)"
+
+[os]
+disabled = false
+style = "bold blue"
+format = "[$symbol ]($style)"
+
+[os.symbols]
+Arch = " "
+NixOS = " "
+
+[time]
+disabled = false
+time_format = "%T"
+format = "at [$time ]($style)"
+
+[direnv]
+disabled = false
+symbol = "direnv"
+style = "bold green"
+format = "[$symbol\\($loaded/$allowed\\)]($style) "
+
+# language
+[c]
+symbol = ""
+style = "bold blue"
+format = '[$symbol( $version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bold #B7410E"
+format = '[$symbol( $version) ]($style)'
+
+[golang]
+symbol = ""
+style = "bold blue"
+format = '[$symbol( $version) ]($style)'
+
+[python]
+symbol = ""
+style = "bold green"
+format = '[$symbol( $version) ]($style)'
+
+[java]
+symbol = ""
+style = "bold brown"
+format = '[$symbol( $version) ]($style)'
+
+[cmake]
+symbol = ""
+style = "bold blue"
+format = '[$symbol( $version) ]($style)'
+
+[pixi]
+symbol = "🧚 "
+style = "yellow bold"
+show_default_environment = false
+format = "via [$symbol($version )(\\($environment\\) )]($style)"
+
+[nodejs]
+symbol = "󰎙"
+style = "bold green"
+format = '[$symbol( $version)]($style)'

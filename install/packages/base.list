@@ -1,0 +1,8 @@
+# Arch bootstrap tooling (profile: base)
+base-devel
+git
+stow
+curl
+wget
+unzip
+rsync

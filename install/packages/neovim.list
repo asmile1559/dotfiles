@@ -1,0 +1,13 @@
+# Neovim (LazyVim) and the toolchain its config calls out to
+neovim
+nodejs
+npm
+python
+stylua
+prettier
+python-black
+codespell
+clang
+go
+tree-sitter-cli
+lazygit

@@ -1,0 +1,9 @@
+{
+  "catWidget": {
+    "enabled": true,
+    "showCpuPercent": true
+  },
+  "quickCapture": {
+    "enabled": true
+  }
+}

@@ -1,0 +1,18 @@
+# ── Repository metadata (never linked into $HOME) ─────────────────────────
+\.git
+\.gitignore
+\.gitmodules
+\.stow-local-ignore
+
+# ── Documentation ─────────────────────────────────────────────────────────
+README.md
+LICENSE
+
+# ── Repository tooling (installer, not a config) ──────────────────────────
+install
+
+# ── App config dirs that need file-level linking instead of a dir symlink ──
+# VS Code writes caches/globalStorage next to its settings, so the whole
+# directory must stay a real path in $HOME; install/modules/code.sh links the
+# user config files individually.
+\.config/Code

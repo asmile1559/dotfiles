@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=DeepSeek Harness
+Name[zh_CN]=DeepSeek Harness
+Comment=DeepSeek Harness web UI (npx @deepseek-ai/dsh)
+Comment[zh_CN]=通过 npx 启动的 DeepSeek Harness Web 界面
+Exec=sh -c "exec \$HOME/.local/bin/dsh-web"
+Icon=deepseek-harness
+Terminal=false
+Categories=Development;
+Keywords=dsh;deepseek;harness;
+StartupNotify=true

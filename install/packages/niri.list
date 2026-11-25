@@ -1,0 +1,10 @@
+# niri compositor stack (primary session)
+niri
+xwayland-satellite
+polkit-gnome
+playerctl
+brightnessctl
+wl-clipboard
+grim
+slurp
+satty

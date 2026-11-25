@@ -1,0 +1,59 @@
+// Window rules let you adjust behavior for individual windows.
+// Find more information on the wiki:
+// https://yalter.github.io/niri/Configuration:-Window-Rules
+
+// Example: enable rounded corners for all windows.
+// (This example rule is commented out with a "/-" in front.)
+/-window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+  geometry-corner-radius 12.0
+  clip-to-geometry true
+}
+
+// window-rule {
+//   // This regular expression is intentionally made as specific as possible,
+//   // since this is the default config, and we want no false positives.
+//   // You can get away with just app-id="wezterm" if you want.
+//   match app-id=r#"zen"#
+//   match app-id=r#"code"#
+//   default-column-width { proportion 1.0; }
+//   open-floating false
+// }
+
+// Dux Modular Shell (DMS): Settings/Notepad 等普通窗口共用 app-id dev.duxlabs.shell。
+// 以浮动窗口打开，宽度 1080，高度跟随工作区比例拉满全高（沿用 Noctalia 时代的习惯）。
+// 参考: https://duxlabs.dev/docs/dms/layers#floating-windows
+window-rule {
+  match app-id="dev.duxlabs.shell"
+  open-floating true
+  default-column-width { fixed 1080; }
+  default-window-height { proportion 1.0; }
+  draw-border-with-background false
+  geometry-corner-radius 12
+  clip-to-geometry true
+}
+
+window-rule {
+  // This app-id regular expression will work for both:
+  // - host Firefox (app-id is "firefox")
+  // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+  match title="wps"
+  open-floating true
+}
+
+// Example: block out two password managers from screen capture.
+// (This example rule is commented out with a "/-" in front.)
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+
+    // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
+

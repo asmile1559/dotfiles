@@ -1,0 +1,7 @@
+environment {
+  QT_QPA_PLATFORMTHEME "gtk3"
+  // DMS 等应用通过 $TERMINAL 决定默认终端；显式指定为 ghostty。
+  TERMINAL "ghostty"
+  // 日期/日历等显示中文（系统 LANG 为 en_US.UTF-8）
+  LC_TIME "zh_CN.UTF-8"
+}

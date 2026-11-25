@@ -1,0 +1,11 @@
+# configuration please reference to https://ghostty.org/docs/config
+
+# theme
+theme = "Catppuccin Mocha"
+
+# fonts
+font-family = "Maple Mono NL NF CN"
+
+# working dir
+working-directory = "home"
+window-inherit-working-directory = false

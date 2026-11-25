@@ -1,0 +1,23 @@
+// ── Zellij 配置 ────────────────────────────────────────────────────────────
+// 文档: https://zellij.dev/documentation/options
+// 主题与配色跟桌面保持一致（Catppuccin Mocha）。
+
+theme "catppuccin-mocha"
+
+// 默认布局: layouts/default.kdl（顶部 tab 栏 + 主窗格 + 底部状态栏）
+default_layout "default"
+
+// 新窗格使用的 shell
+default_shell "zsh"
+
+// Wayland 剪贴板（wl-clipboard 已随仓库安装）
+copy_command "wl-copy"
+copy_clipboard "system"
+
+// 复制模式下用 nvim 编辑回滚内容
+scrollback_editor "nvim"
+
+// 界面
+pane_frames true      // 显示窗格边框
+mouse_mode true       // 允许鼠标选择/滚动
+simplified_ui false   // 使用 nerd font 箭头；字体不显示时可改为 true

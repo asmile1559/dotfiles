@@ -1,0 +1,18 @@
+# Shell: zsh, zimfw ecosystem and CLI helpers
+zsh
+zimfw
+starship
+direnv
+zoxide
+fzf
+fd
+ripgrep
+bat
+eza
+zellij
+
+# Yazi terminal file manager + preview helpers
+yazi
+7zip
+resvg
+chafa

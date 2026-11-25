@@ -1,0 +1,21 @@
+// Add lines like this to spawn processes at startup.
+// Note that running niri as a session supports xdg-desktop-autostart,
+// which may be more convenient to use.
+// See the binds section below for more spawn examples.
+
+// Dux Modular Shell (DMS): 由 systemd 用户服务管理
+//（`dms systemd enable` 让 niri.service wants dms.service），不再在这里 spawn，
+// 否则会和 dms.service 同时拉起两个 shell。
+// 配置在 ~/.config/dms/settings.json，主题在 ~/.config/dms/themes/。
+// spawn-at-startup "dms" "run"
+
+// Idle/lock 由 DMS 的 Power & battery 设置处理：
+//   ~/.config/dms/settings.json 里的 ac/battery LockTimeout 与 MonitorTimeout。
+// 如果以后想改用 swayidle，对应命令是 `dms ipc call lock lock`：
+// spawn-at-startup "swayidle" "-w" \
+//   "timeout" "300" "dms ipc call lock lock" \
+//   "timeout" "600" "systemctl suspend || loginctl suspend" \
+//   "before-sleep" "dms ipc call lock lock"
+//   "timeout" "601" "niri msg action power-off-monitors"
+
+//spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"

@@ -1,0 +1,16 @@
+# 默认 profile：在 GNOME 基础系统上一次性装好全部模块（含 niri 会话）。
+# 一行一个模块 id，顺序即执行顺序。
+base
+stow
+shell
+terminal
+neovim
+fcitx5
+fonts
+gnome
+niri
+dms
+apps
+dsh
+code
+flatpak

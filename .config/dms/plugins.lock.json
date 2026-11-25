@@ -1,0 +1,14 @@
+{
+  "lockfileVersion": 1,
+  "plugins": {
+    "catWidget": {
+      "repo": "https://github.com/xi-ve/cat-dms",
+      "commit": "eb7b5138b672be3c06445dd80de6bc30c3076030"
+    },
+    "quickCapture": {
+      "repo": "https://github.com/hthienloc/dms-plugins",
+      "path": "quickCapture",
+      "commit": "b7d5dbff7b768b8500d8d57ca9bdb3cae8957159"
+    }
+  }
+}

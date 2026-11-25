@@ -1,0 +1,8 @@
+#!/bin/sh
+# dsh-web - launch the DeepSeek Harness web UI from the system package.
+#
+# Backed by the pacman package deepseek-harness (/usr/bin/dsh); upgrades come
+# from pacman/paru instead of the npx cache.
+set -eu
+
+exec /usr/bin/dsh web "$@"

@@ -1,0 +1,13 @@
+// 开发布局: 左侧 nvim，右侧 shell；Ctrl+t 打开标签栏后可再开 shell tab。
+// 用法: zellij --layout dev
+layout {
+    tab name="dev" focus=true {
+        pane split_direction="vertical" {
+            pane size="60%" command "nvim"
+            pane
+        }
+    }
+    tab name="shell" {
+        pane
+    }
+}

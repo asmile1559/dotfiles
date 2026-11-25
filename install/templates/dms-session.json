@@ -1,0 +1,20 @@
+{
+  "configVersion": 7,
+  "isLightMode": false,
+  "wallpaperPath": "@HOME@/.config/wallpapers/arch-purple.jpeg",
+  "wallpaperTransition": "fade",
+  "perMonitorWallpaper": false,
+  "perModeWallpaper": false,
+  "nightModeEnabled": false,
+  "nightModeTemperature": 4000,
+  "nightModeHighTemperature": 6500,
+  "nightModeAutoEnabled": false,
+  "nightModeAutoMode": "time",
+  "latitude": 32.0603,
+  "longitude": 118.7969,
+  "nightModeLocationName": "Nanjing, China",
+  "weatherLocation": "Nanjing, China",
+  "weatherCoordinates": "32.0603,118.7969",
+  "locale": "zh_CN",
+  "timeLocale": "zh_CN"
+}

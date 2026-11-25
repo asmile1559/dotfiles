@@ -1,0 +1,131 @@
+{
+    "editor.fontFamily": "'Maple Mono NL NF CN', 'Fira Code'",
+    "editor.rulers": [
+        80
+    ],
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true,
+    "[c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultColorDecorators": "never"
+    },
+    "[lua]": {
+        "editor.tabSize": 2,
+        "editor.quickSuggestions": {
+            "comments": "inline",
+            "other": "on",
+            "strings": "on"
+        },
+        "editor.semanticHighlighting.enabled": true
+    },
+    "[go]": {
+        "editor.insertSpaces": false
+    },
+    "[rust]": {
+        "editor.tabSize": 4
+    },
+    "[toml]": {
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.suggest.insertMode": "replace"
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.maxTokenizationLineLength": 2500
+    },
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.maxTokenizationLineLength": 2500
+    },
+    "[markdown]": {
+        "editor.tabSize": 2,
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.wordWrap": "off",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    },
+    "[kdl]": {
+        "editor.tabSize": 2
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "files.autoSave": "afterDelay",
+    "window.restoreWindows": "none",
+    "terminal.integrated.stickyScroll.enabled": false,
+    "redhat.telemetry.enabled": true,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.editor.empty.hint": "hidden",
+    "docker.extension.enableComposeLanguageServer": false,
+    "vim.smartRelativeLine": true,
+    "python.analysis.typeCheckingMode": "standard",
+    "chat.viewSessions.orientation": "stacked",
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "remote.SSH.remotePlatform": {},
+    "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+    "workbench.preferredLightColorTheme": "GitHub Light",
+    "window.autoDetectColorScheme": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": "off",
+        "strings": "off"
+    },
+    "update.mode": "manual",
+    "leetcode.endpoint": "leetcode-cn",
+    "settingsSync.ignoredSettings": [
+        "leetcode.workspaceFolder"
+    ],
+    "leetcode.filePath": {
+        "java": {
+            "folder": "javacode/app/src/main/java/org/example/questions/lc${id}",
+            "filename": "Solution.${ext}"
+        },
+        "golang": {
+            "folder": "gocode/src/solutions/lc${id}",
+            "filename": "solution.${ext}"
+        },
+        "python3": {
+            "folder": "pythoncode/src/solutions/lc${id}",
+            "filename": "solution.${ext}"
+        },
+        "default": {
+            "folder": "",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        }
+    },
+    "leetcode.workspaceFolder": "/Users/luo/Documents/coding/lc/questions",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.showDescription": "In File Comment",
+    "leetcode-problem-rating.workspaceFolder": "",
+}
